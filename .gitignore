@@ -64,3 +64,6 @@ DerivedDataCache/*
 
 # Don't include BLUI
 Plugins/BLUI/
+
+# .. or the Cache for it.
+BluCache/
