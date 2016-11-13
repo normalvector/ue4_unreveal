@@ -1,0 +1,6 @@
+/* Special CSS overwrites for Unreveal.js */
+
+body {
+  /* We need this so we can see the game world */
+  background-color: transparent !important;
+}

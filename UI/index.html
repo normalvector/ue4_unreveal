@@ -1,20 +1,65 @@
-<!doctype>
-<html>
-  <head>
-    <title>Simple Overlay</title>
-    <style>
-      body {
-        background-color: transparent;
-        color: white;
-        text-shadow: 2px 2px 2px rgba(0,0,0, 0.5);
-        padding: 4rem;
-        text-align: center;
-        font-family: sans-serif;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Unreveal</h1>
-    <p>This is just a piece of placeholder content for Unreveal</p>
-  </body>
+<!doctype html>
+<htm>
+
+	<head>
+		<title>Simple Reveal.js demo</title>
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="./reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="./reveal.js/css/theme/black.css" id="theme">
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="./reveal.js/lib/css/zenburn.css">
+    <!-- Overwrite the styles with some Unreveal stuff -->
+    <link rel="stylesheet" href="./unreveal.css">
+	</head>
+
+	<body>
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Unreveal</h1>
+					<p>A presentation system with the power of a game engine</p>
+				</section>
+
+				<section>
+					<h2>Built On</h2>
+          <h3>Unreal Engine 4</h3>
+          <p>The game engine by Epic Games</p>
+          <h3>reveal.js</h3>
+          <p>Hakim El Hattab's JavaScript presentation system</p>
+          <h3>Blui</h3>
+          <p>Web browser for the Unreal Engine, by Aaron Shea</p>
+				</section>
+
+				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom"
+					<h1>..and all done!</h1>
+        </section>
+			</div>
+		</div>
+
+		<script src="./reveal.js/lib/js/head.min.js"></script>
+		<script src="./reveal.js/js/reveal.js"></script>
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: './reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: './reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: './reveal.js/plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+	</body>
 </html>
